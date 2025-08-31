@@ -1,0 +1,16 @@
+Security Features:
+Password Hashing: Uses bcrypt with salt for secure password storage.
+JWT Tokens: Secure token-based authentication with expiration.
+Input Validation: Basic validation for required fields.
+Unique Constraints: Prevents duplicate usernames and emails.
+HTTPS Ready: Can be easily deployed with HTTPS in production.
+
+Production Considerations:
+Use environment variables for all secrets.
+Enable HTTPS in production.
+Implement rate limiting.
+Add more comprehensive input validation.
+Implement token blacklisting for logout functionality.
+Set up proper database backups.
+Use a process manager like Gunicorn for deployment.
+Implement comprehensive logging.
