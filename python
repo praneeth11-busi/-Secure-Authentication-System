@@ -1,0 +1,12 @@
+5. init_db.py
+python
+from app import app, db
+
+with app.app_context():
+    db.create_all()
+    print("Database tables created successfully!")
+6. .env (Create this file)
+env
+SECRET_KEY=your-super-secret-random-key-here
+JWT_SECRET_KEY=your-jwt-super-secret-key-here
+DATABASE_URL=postgresql://username:password@localhost/auth_system
