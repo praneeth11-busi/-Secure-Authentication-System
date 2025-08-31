@@ -1,0 +1,29 @@
+Testing the API
+You can test the API using curl or a tool like Postman:
+
+Register a new user
+bash
+curl -X POST -H "Content-Type: application/json" -d '{
+  "username": "testuser",
+  "email": "test@example.com",
+  "password": "securepassword123"
+}' http://localhost:5000/register
+
+Login
+bash
+curl -X POST -H "Content-Type: application/json" -d '{
+  "username": "testuser",
+  "password": "securepassword123"
+}' http://localhost:5000/login
+
+Access protected route (using the access token from login)
+bash
+curl -X GET -H "Authorization: Bearer YOUR_ACCESS_TOKEN" http://localhost:5000/profile
+
+Refresh token
+bash
+curl -X POST -H "Authorization: Bearer YOUR_REFRESH_TOKEN" http://localhost:5000/refresh
+
+Logout
+bash
+curl -X POST -H "Authorization: Bearer YOUR_ACCESS_TOKEN" http://localhost:5000/logout
