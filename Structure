@@ -1,0 +1,10 @@
+Project Structure
+text
+secure_auth_system/
+│
+├── app.py
+├── config.py
+├── models.py
+├── requirements.txt
+├── init_db.py
+└── README.md
